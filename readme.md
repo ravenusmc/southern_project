@@ -3,7 +3,9 @@
 
 The purpose of this project is to examine data from letters, novels and other written devices that
 came for the American South during the 19th and early 20th century. This is a project that I've thought
-about for a while and decided to slowly start building it.
+about for a while and decided to slowly start building it. I plan on having a part
+of this project to have sentiment analysis, a word map, common words and well see
+what else I can fit in. 
 
 Link to site: https://www.kaggle.com/docsouth-data/library-of-southern-literature
 
