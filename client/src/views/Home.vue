@@ -1,6 +1,14 @@
 <template>
   <div>
     <Navbar />
+    <div class="header">
+      <b-jumbotron
+        class="header"
+        header="Southern Project"
+        lead="Understanding the South through Literature and NLP"
+      >
+      </b-jumbotron>
+    </div>
     <Footer />
   </div>
 </template>
@@ -18,3 +26,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.header {
+  background-image: url("../assets/images/jumbotron.jpg");
+  height: 400px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+</style>
