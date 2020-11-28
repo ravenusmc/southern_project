@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="header">
+    <div class="container">
       <b-jumbotron
         class="header"
         header="Southern Project"
@@ -9,6 +9,7 @@
       >
       </b-jumbotron>
     </div>
+    <MiddleSection />
     <Footer />
   </div>
 </template>
@@ -16,12 +17,14 @@
 <script>
 // @ is an alias to /src
 import Navbar from "@/components/view/Navbar.vue";
+import MiddleSection from "@/components/home/MiddleSection.vue";
 import Footer from "@/components/view/Footer.vue";
 
 export default {
   name: "Home",
   components: {
     Navbar,
+    MiddleSection,
     Footer,
   },
 };
@@ -30,7 +33,7 @@ export default {
 <style scoped>
 .header {
   background-image: url("../assets/images/jumbotron.jpg");
-  height: 400px;
+  height: 500px;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
