@@ -3,7 +3,13 @@
     <section>
       <div class="div-one common-div-features"></div>
 
-      <div class="div-two common-div-features">The Study</div>
+      <div class="div-two">
+        <a class="nav-link"
+          ><router-link to="/study" class="study-button"
+            >The Study</router-link
+          ></a
+        >
+      </div>
 
       <div class="div-three common-div-features"></div>
     </section>
@@ -40,9 +46,20 @@ section {
 }
 
 .div-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 10%;
   width: 10%;
   border-radius: 100%;
+  border: 2px solid black;
+  padding: 50px;
+  background-color: #15a3b8;
+}
+
+.study-button {
+  color: white;
 }
 
 .div-three {
@@ -53,8 +70,20 @@ section {
 }
 
 @media only all and (max-width: 900px) {
+  
   section {
     flex-direction: column;
+    height: 1000px;
+  }
+
+  .common-div-features {
+    height: 600px;
+    width: 400px;
+  }
+
+  .div-two {
+    padding: 80px;
+    margin: 15px 0px 15px 0px;
   }
 }
 </style>
