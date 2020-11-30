@@ -4,8 +4,8 @@
     <div class="container">
       <b-jumbotron
         class="header"
-        header="Southern Project"
-        lead="Understanding the South through Literature and NLP"
+        header="The Southern Project"
+        lead="Understanding the South through Literature and Sentiment Analysis"
       >
       </b-jumbotron>
     </div>
