@@ -15,8 +15,8 @@
           from the early 19th to 20th centuries. Besides sentiment analysis,
           this project will also look at word counts and how they changed over
           time. Finally, there will be examing the sentiment of individual
-          speeches. Thus slowly scroll down the page and see what my study has 
-					found...
+          speeches. Thus slowly scroll down the page and see what my study has
+          found...
         </p>
       </div>
 
@@ -63,8 +63,12 @@ section {
     grid-template-columns: 1fr;
   }
 
-	.paragraph-div {
-		width: 100%;
-	}
+  .paragraph-div {
+    width: 100%;
+  }
+
+  .pic-div {
+    display: none;
+  }
 }
 </style>
