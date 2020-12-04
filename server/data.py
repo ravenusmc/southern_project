@@ -17,10 +17,10 @@ class Analysis():
 		# print(self.main_csv.head())
 
 	def fetch_sentiment_overtime(self):
-		#Need to get the min and max years 
-		min_year = self.main_csv['Date'].min()
-		max_year = self.main_csv['Date'].min()
-		print(self.main_csv['Date'])
+		min_year = self.main_csv['Date'].min() # Working min year 1709
+		max_year = self.main_csv['Date'].max() # Working max year 1927
+		while min_year <= max_year:
+			
 		#Need to get all speeches by year 
 		#get sentiment of single speech during year
 		#average together all sentiments for speeches in given year
