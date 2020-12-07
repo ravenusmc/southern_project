@@ -30,17 +30,16 @@ class Analysis():
 			content_by_year = self.support.get_content_by_year(self.main_csv, min_year)
 			if not content_by_year.empty:
 				# Possibly need to added another loop here 
-				file_name = self.support.get_file_name(content_by_year)
-				
-				
-				# Have to change the end of file names. 
-				# converted_file_name = self.support.change_file_name_ending(file_name)
-				# text_file = self.support.getting_text_file(converted_file_name)
+				content_list = self.support.get_file_name(content_by_year)
+				for text_file in content_list:
+					# Have to change the end of file names.
+					converted_file_name = self.support.change_file_name_ending(text_file)
+					text_file = self.support.getting_text_file(converted_file_name)
+					text_converted = self.support.get_text_to_textBlob_format(text_file)
 
 				# Get sentiment of single speech during year
 			min_year += 1
 			
-		# I need to make sure that I loop through multiple speeches not just one 
 		# average together all sentiments for speeches in given year
 		# put the year to the average sentiment for the graph data. 
 
