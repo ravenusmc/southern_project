@@ -31,9 +31,11 @@ class Analysis():
 			if not content_by_year.empty:
 				# Possibly need to added another loop here 
 				file_name = self.support.get_file_name(content_by_year)
+				
+				
 				# Have to change the end of file names. 
-				converted_file_name = self.support.change_file_name_ending(file_name)
-				text_file = self.support.getting_text_file(converted_file_name)
+				# converted_file_name = self.support.change_file_name_ending(file_name)
+				# text_file = self.support.getting_text_file(converted_file_name)
 
 				# Get sentiment of single speech during year
 			min_year += 1

@@ -20,11 +20,16 @@ class Support():
 	
 	def get_file_name(self, content_by_year):
 		content_list = []
-		if len(content_by_year.Filename) = 1:
-			content_by_year.Filename.iloc[0]
-		print(len(content_by_year.Filename))
-		input()
-		return content_by_year.Filename.iloc[0]
+		if len(content_by_year.Filename) == 1:
+			file_name = content_by_year.Filename.iloc[0]
+			content_list.append(file_name)	
+		elif len(content_by_year.Filename) > 1:
+			count = 0	
+			while count < len(content_by_year.Filename):
+				file_name = content_by_year.Filename.iloc[count]
+				content_list.append(file_name)
+				count += 1
+		return content_list
 	
 	def getting_text_file(self, converted_file_name):
 		return open("./data/texts/" + converted_file_name, "r")
