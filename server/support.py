@@ -3,6 +3,8 @@
 #importing supporting libraries
 import numpy as np
 import pandas as pd
+from textblob import TextBlob
+import fileinput
 
 class Support():
 
@@ -35,6 +37,9 @@ class Support():
 		return open("./data/texts/" + converted_file_name, "r")
 	
 	def get_text_to_textBlob_format(self, text_file):
+		# speech_textblob_version = TextBlob(text_file)
+		# print(speech_textblob_version)
+		# input()
 		for x in text_file:
 			print(x)
 			input()
