@@ -33,11 +33,10 @@ class Analysis():
 				# Possibly need to added another loop here 
 				content_list = self.support.get_file_name(content_by_year)
 				for text_file in content_list:
-					# Have to change the end of file names.
 					converted_file_name = self.support.change_file_name_ending(text_file)
 					text_file = self.support.getting_text_file(converted_file_name)
+					text_converted = self.support.get_text_to_textBlob_format(text_file)
 					
-					#text_converted = self.support.get_text_to_textBlob_format(text_file)
 
 				# Get sentiment of single speech during year
 			min_year += 1
