@@ -8,5 +8,12 @@ from textblob import TextBlob
 
 class Sentiment():
 
-	def get_sentiment_of_single_speech():
-		pass
+	def get_sentiment_values_of_single_speech(self, text_converted):
+		sentiment_sentence_list = []
+		for sentence in text_converted.sentences:
+				sentence_sentiment = sentence.sentiment[0]
+				sentiment_sentence_list.append(sentence_sentiment)
+		return sentiment_sentence_list
+	
+	def get_sentiment_average_per_speech(self, sentiment_sentence_list):
+		return sum(sentiment_sentence_list) / len(sentiment_sentence_list)
