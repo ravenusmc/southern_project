@@ -47,11 +47,11 @@ class Analysis():
 					sentiment_speech_average_longer_content_list = self.sentiment.get_sentiment_average_per_speech(list_for_multiple_speeches_in_year)
 					rows.append(min_year)
 					sentiment_speech_average_longer_content_list
-					rows.append(sentiment_speech_average_longer_content_list)
+					rows.append(float(sentiment_speech_average_longer_content_list))
 					sentiment_overtime_data.append(rows)
 				else:
 					rows.append(min_year)
-					rows.append(format(sentiment_speech_average, '.2f'))
+					rows.append(float(format(sentiment_speech_average, '.2f')))
 					sentiment_overtime_data.append(rows)
 			min_year += 1
 		print(sentiment_overtime_data)
