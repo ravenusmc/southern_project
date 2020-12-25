@@ -89,7 +89,6 @@ export default new Vuex.Store({
     //       commit('setInitialValue', initialValue);
     //     });
     // },
-
   },
 
   mutations: {
