@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueGoogleCharts from 'vue-google-charts';
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -13,6 +14,8 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+// Google charts plugin
+Vue.use(VueGoogleCharts);
 
 
 new Vue({
