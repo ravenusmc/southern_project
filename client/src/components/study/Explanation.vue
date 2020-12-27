@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <section>
       <div class="paragraph-div">
         <p>
@@ -22,10 +23,26 @@
 
       <div class="pic-div"></div>
     </section>
+
+    <!-- Start of Graph Section  -->
+    <section>
+      <GraphCard
+        :typeOne='typeOne'
+        :data='allSpeechesSentiment'
+        :options='chartOptionsOne'>
+      </GraphCard>
+
+
+    </section>
+    <!-- End of Graph Section  -->
+
   </div>
 </template>
 
 <script>
+// import { mapGetters, mapActions } from 'vuex';
+import GraphCard from '@/components/graphs/GraphCard.vue';
+
 export default {
   name: "Explanation",
 };
