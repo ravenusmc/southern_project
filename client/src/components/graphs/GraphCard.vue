@@ -5,3 +5,13 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'GraphCard',
+  props: ['typeOne', 'data', 'options'],
+};
+</script>
+
+<style>
+</style>

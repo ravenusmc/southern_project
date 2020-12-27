@@ -28,7 +28,7 @@
     <section>
       <GraphCard
         :typeOne='typeOne'
-        :data='allSpeechesSentiment'
+        :data='sentimentOverTime'
         :options='chartOptionsOne'>
       </GraphCard>
 
@@ -40,11 +40,40 @@
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import GraphCard from '@/components/graphs/GraphCard.vue';
 
 export default {
   name: "Explanation",
+  components: {
+    GraphCard,
+  },
+  data() {
+    return {
+      typeOne: 'LineChart',
+      chartOptionsOne: {
+        title: 'Sentiment of all Speeches ',
+        legend: { position: 'top' },
+        colors: ['#333'],
+        height: 600,
+        width: 1200,
+        animation: {
+          duration: 1000,
+          easing: 'linear',
+        },
+        vAxis: {
+          viewWindow: {
+            min: -0.025,
+          },
+        },
+      },
+    };
+  },
+  computed: {
+    ...mapGetters([
+      'sentimentOverTime',
+    ]),
+  }, // End Computed properties
 };
 </script>
 
