@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <section>
       <div class="paragraph-div">
         <p>
@@ -25,41 +24,44 @@
     </section>
 
     <!-- Start of Graph Section  -->
-    <section>
+    <section id='graph-area'>
       <GraphCard
-        :typeOne='typeOne'
-        :data='sentimentOverTime'
-        :options='chartOptionsOne'>
+        :typeOne="typeOne"
+        :data="sentimentOverTime"
+        :options="chartOptionsOne"
+      >
       </GraphCard>
 
+      <Form/>
 
     </section>
     <!-- End of Graph Section  -->
-
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
-import GraphCard from '@/components/graphs/GraphCard.vue';
+import { mapGetters, mapActions } from "vuex";
+import GraphCard from "@/components/graphs/GraphCard.vue";
+import Form from "@/components/study/Form.vue";
 
 export default {
   name: "Explanation",
   components: {
     GraphCard,
+    Form,
   },
   data() {
     return {
-      typeOne: 'LineChart',
+      typeOne: "LineChart",
       chartOptionsOne: {
-        title: 'Sentiment of all Speeches ',
-        legend: { position: 'top' },
-        colors: ['#333'],
+        title: "Sentiment of all Texts Over Time",
+        legend: { position: "top" },
+        colors: ["#333"],
         height: 600,
         width: 1200,
         animation: {
           duration: 1000,
-          easing: 'linear',
+          easing: "linear",
         },
         vAxis: {
           viewWindow: {
@@ -70,9 +72,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters([
-      'sentimentOverTime',
-    ]),
+    ...mapGetters(["sentimentOverTime"]),
   }, // End Computed properties
 };
 </script>
@@ -99,6 +99,11 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+}
+
+#graph-area {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only all and (max-width: 1000px) {
