@@ -69,7 +69,7 @@ export default new Vuex.Store({
       [1920, 0.11], 
       [1922, 0.02], 
       [1927, 0.09]
-      ]
+    ],
   },
 
   getters: {
