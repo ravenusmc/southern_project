@@ -20,9 +20,6 @@ class Analysis():
 		self.support = Support()
 		self.sentiment = Sentiment()
 
-	#def test_code(self):
-		# print(self.main_csv.head())
-
 	def fetch_sentiment_overtime(self):
 		sentiment_overtime_data = []
 		columns = ['Year', 'Sentiment']
@@ -55,8 +52,12 @@ class Analysis():
 					sentiment_overtime_data.append(rows)
 			min_year += 1
 		print(sentiment_overtime_data)
+	
+	def get_words_by_decade(self, decade):
+		start_of_decade = self.support.get_start_of_decade(decade)
+		end_of_decade = self.support.get_end_of_decade(decade)
 
 
 
 test = Analysis()
-test.fetch_sentiment_overtime()
+# test.fetch_sentiment_overtime()

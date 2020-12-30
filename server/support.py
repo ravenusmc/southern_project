@@ -39,4 +39,10 @@ class Support():
 	def get_text_to_textBlob_format(self, text_file):
 		text_file_converted = str([cell.encode('utf-8') for cell in text_file])
 		return TextBlob(text_file_converted)
+	
+	def get_start_of_decade(self, decade):
+		return decade[0:4]
+	
+	def get_end_of_decade(self, decade):
+		return decade[5:9]
 

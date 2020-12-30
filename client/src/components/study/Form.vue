@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "Form",
   data() {
@@ -42,14 +44,15 @@ export default {
     };
 	},
 	methods: {
+    ...mapActions([
+      'fetchWordsByDecade',
+    ]),
 		submitForm(evt) {
 			evt.preventDefault();
-			console.log('hi');
-    //   const payload = {
-    //     speech: this.speech,
-    //   };
-    //   this.fireActions({ payload });
-    // },
+      const payload = {
+        decade: this.decade,
+      };
+      this.fetchWordsByDecade({ payload });
 		},
 	},
 };
