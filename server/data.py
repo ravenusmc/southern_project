@@ -54,8 +54,12 @@ class Analysis():
 		print(sentiment_overtime_data)
 	
 	def get_words_by_decade(self, decade):
-		start_of_decade = self.support.get_start_of_decade(decade)
-		end_of_decade = self.support.get_end_of_decade(decade)
+		start_of_decade = int(self.support.get_start_of_decade(decade))
+		end_of_decade = int(self.support.get_end_of_decade(decade))
+		decade_data_set = self.main_csv[(self.main_csv.Date >= start_of_decade) & (self.main_csv.Date <= end_of_decade)]
+		# I need to loop through the dataset for the decade 
+		# Go into an individual text file 
+		# Get the common words from it. 
 
 
 
