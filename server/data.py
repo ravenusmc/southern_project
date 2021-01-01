@@ -57,6 +57,20 @@ class Analysis():
 		start_of_decade = int(self.support.get_start_of_decade(decade))
 		end_of_decade = int(self.support.get_end_of_decade(decade))
 		decade_data_set = self.main_csv[(self.main_csv.Date >= start_of_decade) & (self.main_csv.Date <= end_of_decade)]
+		count = 0
+		while count < len(decade_data_set):
+			file_name = decade_data_set.iloc[count]['Filename']
+			converted_file_name = self.support.change_file_name_ending(file_name)
+			text_file = self.support.getting_text_file(converted_file_name)
+			text_converted = self.support.get_text_to_textBlob_format(text_file)
+			print(text_converted.words)
+			# for line in text_file:
+			# 	stripped_line = line.strip()
+			# 	print(stripped_line)
+			# 	input()
+
+
+			count += 1
 		# I need to loop through the dataset for the decade 
 		# Go into an individual text file 
 		# Get the common words from it. 
