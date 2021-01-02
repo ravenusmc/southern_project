@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 #importing code that I wrote
 from data import *
+from common_words import *
 
 # configuration
 DEBUG = True
@@ -19,9 +20,12 @@ CORS(app)
 def fetch_words_by_decade():
 	if request.method == 'POST':
 		analysis_object = Analysis()
+		word_count_object = Common_Words()
 		data = request.get_json()
 		decade = data['decade']
-		word_count_by_decase = analysis_object.get_words_by_decade(decade)
+		all_words_list = analysis_object.get_words_by_decade(decade)
+		count_of_words_and_words = word_count_object.clean_word_list(all_words_list)
+		print(count_of_words_and_words)
 	return jsonify('pong!')
 
 
