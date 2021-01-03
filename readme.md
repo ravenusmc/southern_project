@@ -37,7 +37,10 @@ as well as npm.
 
 # Issues / Other
 
-None at this time.
+The one big issue that I have with this project is getting the most common words per text is to 
+massive. There are hundreds of thousands of words in a list that takes forever to go through. It 
+appears that working with data I've finally reached an issue that I need to pay attention to 
+how to speed processes up. 
 
 # Preview
 

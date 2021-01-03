@@ -18,6 +18,7 @@ class Common_Words():
 		# removing periods and commas at the end of each word
 		words = self.purge_extra_characters(words_in_list)
 		while len_count < len(words):
+				print(len_count)
 				word_count = 0
 				#I assign the current_word to the current position of the word_count counter
 				current_word = words[len_count].lower()

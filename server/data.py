@@ -65,6 +65,7 @@ class Analysis():
 			text_file = self.support.getting_text_file(converted_file_name)
 			text_converted = self.support.get_text_to_textBlob_format(text_file)
 			words_list = text_converted.words
+			# May be better to use append here. 
 			all_words_list = words_list.copy()
 			count += 1
 		return all_words_list
